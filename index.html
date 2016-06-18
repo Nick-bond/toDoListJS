@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <title>todo app</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+
+    <style type="text/css">
+
+        .content {
+            width: 500px;
+            margin: auto;
+        }
+
+        .new-item {
+            margin: 20px 0;
+        }
+
+        .table tr .remove span {
+            display: none;
+            cursor: pointer;
+        }
+
+        .table tr:hover .remove span {
+            display: inline-block;
+            padding-right: 9px;
+        }
+            .remove span
+        .checked .title {
+            text-decoration: line-through;
+        }
+        .title {
+            background: #f9f9f9;
+            border: 0;
+            display: inline-block;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="content">
+
+    <div class="todo-app">
+
+        <div class="new-item">
+            <form class="form-inline">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Название задачи">
+                </div>
+                <button type="submit" class="btn btn-default">Создать</button>
+            </form>
+        </div>
+
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    <input type="checkbox"/>
+                    <span class="title">Купить хлеб</span>
+                </td>
+                <td class="remove text-right">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </td>
+            </tr>
+            <tr class="checked">
+                <td>
+                    <input type="checkbox" checked="checked"/>
+                    <span class="title">Вынести мусор</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="todo.js"></script>
+</body>
+</html>
